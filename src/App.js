@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
 import Home from '../src/views/Home'
+import Film from '../src/views/Film'
 
 export default class App extends Component {
   render() {
@@ -8,7 +9,8 @@ export default class App extends Component {
     return (
         <BrowserRouter>
             <Switch>
-                <Route path="/" component={Home}/> 
+                <Route exact path="/" component={Home}/> 
+                <Route path="/film/:id" component={Film}/> 
                
             </Switch>
 
